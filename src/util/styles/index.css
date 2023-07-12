@@ -1,0 +1,202 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;600;800&display=swap");
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
+    "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+  color: #ffffff;
+  font-family: "Inter", sans-serif;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+.tx800 {
+  font-weight: 800 !important;
+}
+.tx700 {
+  font-weight: 700 !important;
+}
+
+.tx600 {
+  font-weight: 600 !important;
+}
+
+.tx500 {
+  font-weight: 500 !important;
+}
+
+.tx400 {
+  font-weight: 400 !important;
+}
+
+.tx300 {
+  font-weight: 300 !important;
+}
+
+.capitalize {
+  text-transform: capitalize !important;
+}
+
+.tx60 {
+  font-size: 0.625rem !important;
+}
+
+.tx70 {
+  font-size: 0.7rem !important;
+}
+.tx75 {
+  font-size: 0.75rem !important;
+}
+.tx85 {
+  font-size: 0.85rem !important;
+}
+.tx90 {
+  font-size: 0.9rem !important;
+}
+
+.tx100 {
+  font-size: 1rem !important;
+}
+
+.tx110 {
+  font-size: 1.1rem !important;
+}
+
+.tx115 {
+  font-size: 1.15rem !important;
+}
+
+.tx125 {
+  font-size: 1.25rem !important;
+}
+
+.tx130 {
+  font-size: 1.3rem !important;
+}
+
+.tx150 {
+  font-size: 1.5rem !important;
+}
+
+.tx175 {
+  font-size: 2rem !important;
+}
+
+.c1 {
+  color: #07a197;
+}
+
+.c2 {
+  color: #f77d55;
+}
+
+.c3 {
+  color: #4e4b66;
+  font-weight: 600;
+}
+
+.c4 {
+  color: #ffffff !important;
+}
+
+.c5 {
+  color: #000 !important;
+}
+
+.pointer {
+  /* cursor: pointer; */
+  text-decoration: none;
+  color: black;
+}
+
+.pointer:hover {
+  cursor: pointer;
+  /* color: #c1c1c1; */
+  /* outline: 1.5px dashed silver; */
+}
+.pointer_outlined:hover {
+  /* color: #c1c1c1; */
+  outline: 1.5px dashed silver;
+}
+.pointer_dark {
+  cursor: pointer;
+  text-decoration: none;
+  background: #000 !important;
+  color: #fff !important;
+}
+
+.pointer_dark:hover {
+  background: #fff !important;
+  color: #000 !important;
+}
+
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+  scrollbar-width: auto;
+  scrollbar-color: #b2b2b2 #ffffff;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #ffffff;
+  border-radius: 4px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #b2b2b2;
+  border-radius: 4px;
+  border: 1px none #ffffff;
+}
+
+.css-17qar0e-MuiInputBase-input-MuiOutlinedInput-input {
+  padding: 0.5rem 1rem !important;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.smooth {
+  transition: 3000s ease !important;
+  scroll-behavior: smooth !important;
+}
+
+.font_railway {
+  font-family: "Raleway", sans-serif !important;
+}
+
+.font_inter {
+  font-family: "Inter", sans-serif;
+}
+
+.noscrollbar::-webkit-scrollbar {
+  width: 0 !important;
+  height: 0 !important;
+}
+
+.noscrollbar::-webkit-scrollbar-track {
+  background: transparent !important; /* Optional: Set a custom background color for the scrollbar track */
+}
+
+.MuiAvatar-img {
+  object-fit: fill !important;
+}

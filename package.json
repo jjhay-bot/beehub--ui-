@@ -1,0 +1,79 @@
+{
+  "name": "sol-nft-ui",
+  "version": "0.1.0",
+  "home": "home",
+  "private": true,
+  "dependencies": {
+    "@apollo/client": "^3.6.9",
+    "@emotion/react": "^11.9.0",
+    "@emotion/styled": "^11.8.1",
+    "@metaplex-foundation/js": "^0.19.4",
+    "@mui/icons-material": "^5.8.2",
+    "@mui/material": "^5.8.2",
+    "@mui/styled-engine-sc": "^5.8.0",
+    "@mui/x-data-grid": "^5.14.0",
+    "@mui/x-date-pickers": "^6.1.0",
+    "@reduxjs/toolkit": "^1.9.3",
+    "@solana/spl-token": "^0.3.8",
+    "@solana/wallet-adapter-phantom": "^0.9.23",
+    "@solana/wallet-adapter-react": "^0.15.32",
+    "@solana/web3.js": "^1.78.0",
+    "@testing-library/jest-dom": "^5.16.4",
+    "@testing-library/react": "^13.3.0",
+    "@testing-library/user-event": "^13.5.0",
+    "aws-sdk": "^2.1368.0",
+    "axios": "^1.4.0",
+    "browser-image-compression": "^2.0.2",
+    "bs58": "^5.0.0",
+    "date-fns": "^2.29.1",
+    "env-cmd": "^10.1.0",
+    "graphql": "^16.5.0",
+    "js-base64": "^3.7.3",
+    "localforage": "^1.10.0",
+    "lodash": "^4.17.21",
+    "phil-reg-prov-mun-brgy": "^1.1.0",
+    "philippine-location-json-for-geer": "^1.1.11",
+    "react": "^18.1.0",
+    "react-copy-to-clipboard": "^5.1.0",
+    "react-dom": "^18.1.0",
+    "react-image-gallery": "^1.2.12",
+    "react-image-previewer": "^1.1.6",
+    "react-insta-stories": "^2.5.9",
+    "react-material-ui-carousel": "^3.4.2",
+    "react-photo-view": "^1.2.3",
+    "react-redux": "^8.0.5",
+    "react-responsive-carousel": "^3.2.23",
+    "react-router-dom": "^6.3.0",
+    "react-scripts": "5.0.1",
+    "react-scroll": "^1.8.9",
+    "react-slick": "^0.29.0",
+    "s3-deploy": "^1.4.0",
+    "styled-components": "^5.3.5",
+    "web-vitals": "^2.1.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "CI=false && react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "serve": "serve -s build -l 3000"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
