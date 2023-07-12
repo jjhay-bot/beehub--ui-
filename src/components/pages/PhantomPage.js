@@ -120,19 +120,25 @@ const getProvider = () => {
   if ("phantom" in window) {
     const anyWindow = window;
     const provider = anyWindow.phantom?.solana;
-
+    // if (window.phantom) {
+    //   // window.open("https://phantom.app/", "_blank");
+    // }
     if (provider?.isPhantom) {
       return provider;
+    } else {
     }
   }
-  // window.open("https://phantom.app/", "_blank");
 };
 const provider = getProvider();
 
 const NoProvider = () => {
+  useEffect(() => {
+    // window.open("https://phantom.app/")
+  }, []);
   return (
     <>
       <h2>Could not find a provider</h2>
+      <h3>Please add phantom wallet to connect</h3>
     </>
   );
 };
