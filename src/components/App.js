@@ -5,6 +5,7 @@ import AppBarContainer from "./AppBar";
 import { Box } from "@mui/material";
 import HomePage from "./pages/HomePage";
 import WalletPage from "./pages/WalletPage";
+import PhantomPage from './pages/PhantomPage';
 
 export function AppOutlet() {
   const { pathname } = useLocation();
@@ -40,6 +41,7 @@ function App() {
         <Route path="*" element={<Navigate to="/" state={{ from: location }} replace />} />
         <Route path="test" element={<Test />} />
         <Route path="wallet" element={<WalletPage />} />
+        <Route path="phantom" element={<PhantomPage />} />
         <Route index path="" element={<HomePage />} />
         {/* RELEASE #1 */}
         {/* <Route path="main" element={<MainPage />} /> */}
