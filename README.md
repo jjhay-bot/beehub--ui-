@@ -1,2 +1,2 @@
-# momento-web-app
-Code repository for web app
+# Solana-dApps
+Code repository for dApss
