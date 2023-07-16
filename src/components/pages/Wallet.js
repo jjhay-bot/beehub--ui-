@@ -4,6 +4,7 @@ import { Box, Button, Chip, Grid, Stack } from "@mui/material";
 import { clusterApiUrl, Connection, LAMPORTS_PER_SOL, PublicKey } from "@solana/web3.js";
 import { Item } from "../atoms/customComponent";
 import { TOKEN_PROGRAM_ID } from "@solana/spl-token";
+import NewNote from "./NewNote";
 
 const Wallet = () => {
   const [connected, setConnected] = useState(false);
@@ -129,6 +130,7 @@ const Wallet = () => {
               </Grid>
             ) : null}
           </Stack>
+          <NewNote adapter={adapter} pubKey={pubKey} />
         </>
       ) : (
         <>

@@ -5,6 +5,8 @@ import AppBarContainer from "./AppBar";
 import { Box } from "@mui/material";
 import HomePage from "./pages/HomePage";
 import WalletPage from "./pages/WalletPage";
+import NewNotePage from "./pages/NewNotePage";
+import ConnectWallet from "./pages/ConnectWallet";
 // import PhantomPage from './pages/PhantomPage';
 
 export function AppOutlet() {
@@ -41,6 +43,8 @@ function App() {
         <Route path="*" element={<Navigate to="/" state={{ from: location }} replace />} />
         <Route path="test" element={<Test />} />
         <Route path="wallet" element={<HomePage />} />
+        <Route path="note" element={<NewNotePage />} />
+        <Route path="buildspace" element={<ConnectWallet />} />
         {/* <Route path="phantom" element={<PhantomPage />} /> */}
         <Route index path="" element={<WalletPage />} />
         {/* RELEASE #1 */}
