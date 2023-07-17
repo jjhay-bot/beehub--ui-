@@ -63,7 +63,9 @@ export default function AppBarContainer(props) {
                     width={25}
                   />
                 </Item>
-                <Item className="tx600 tx115 c4">BeeHubs</Item>
+                <Item className="tx600 tx115 c4" onClick={() => navigate("/")}>
+                  BeeHub
+                </Item>
                 <Item className="tx400 tx115 c4">(Build using Solana)</Item>
               </Grid>
             </Item>
@@ -77,7 +79,7 @@ export default function AppBarContainer(props) {
                     <Button
                       className="capitalize tx100 tx400"
                       sx={{ color: "white" }}
-                      onClick={() => navigate("/")}>
+                      onClick={() => navigate("/wallet")}>
                       Home
                     </Button>
                   </Item>

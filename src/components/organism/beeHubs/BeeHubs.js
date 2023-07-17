@@ -109,6 +109,20 @@ const BeeHubs = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [walletAddress]);
 
+  useEffect(() => {
+    // This function will run when the component mounts
+    const intervalId = setInterval(() => {
+      getGifList();
+      console.log("tessst");
+    }, 90000);
+
+    // This function will run when the component unmounts
+    return () => {
+      clearInterval(intervalId);
+    };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   if (!gifList) return <NewGifAccount baseAccount={baseAccount} getGifList={getGifList} />;
 
   return (
@@ -156,12 +170,18 @@ const BeeHubs = () => {
           <Grid container gap={2}>
             {gifList?.map((gif, i) => (
               <Grid key={i} py={1}>
-                <img src={gif.gifLink} alt="img" width={200} height={200} style={{ borderRadius: "2.5rem" }} />
+                <img
+                  src={gif.gifLink}
+                  alt="img"
+                  width={200}
+                  height={200}
+                  style={{ borderRadius: "2.5rem" }}
+                />
                 <Grid container gap={1} justifyContent="space-between" alignItems="end" px={1} pb={1}>
                   <Tooltip title="Gif name" arrow>
-                    <Grid className="tx800 tx100 c1"
-                      sx={{maxWidth: "100px"}}
-                    >{startCase(gif.gifName)}</Grid>
+                    <Grid className="tx800 tx100 c1" sx={{ maxWidth: "100px" }}>
+                      {startCase(gif.gifName)}
+                    </Grid>
                   </Tooltip>
                   <Tooltip title="hashtag" arrow>
                     <Grid className="tx500 tx80 c1">#{gif.gifTag}</Grid>

@@ -46,7 +46,7 @@ function App() {
         <Route path="wallet" element={<HomePage />} />
         <Route path="note" element={<NewNotePage />} />
         <Route path="buildspace" element={<ConnectWallet />} />
-        <Route path="beehubs" element={<BeeHubsPage />} />
+        <Route path="beehub" element={<BeeHubsPage />} />
         {/* <Route path="phantom" element={<PhantomPage />} /> */}
         {/* <Route index path="" element={<WalletPage />} /> */}
         <Route index path="" element={<BeeHubsPage />} />
