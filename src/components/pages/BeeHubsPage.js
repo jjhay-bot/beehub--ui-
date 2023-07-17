@@ -21,9 +21,9 @@ const BeeHubsPage = () => {
   const [walletAddress, setWalletAddress] = useState(sessionStorage.getItem("wallet"));
 
   useLayoutEffect(() => {
-    !walletAddress && connectWallet();
+    walletAddress && connectWallet();
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [walletAddress]);
 
   const connectWallet = async () => {
     const { solana } = window;

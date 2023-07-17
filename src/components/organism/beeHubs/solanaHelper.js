@@ -12,7 +12,7 @@ export const InputField = (props) => {
       multiline={false}
       size="small"
       name={props.name}
-      label={startCase(props.name)}
+      label={props.optional ? `${startCase(props.name)}(Optional)` : startCase(props.name)}
       {...props}
     />
   );
@@ -23,7 +23,7 @@ export const resetForm = {
   gif_tag: null,
   gif_name: null,
   timestamp: null,
-  author: "jhay",
-  author_avatar: "JJ",
+  author: localStorage.getItem("gif_author") || "jjhay",
+  author_avatar: null,
   style: null,
 };

@@ -4,7 +4,7 @@ import Test from "./pages/Test";
 import AppBarContainer from "./AppBar";
 import { Box } from "@mui/material";
 import HomePage from "./pages/HomePage";
-import WalletPage from "./pages/WalletPage";
+// import WalletPage from "./pages/WalletPage";
 import NewNotePage from "./pages/NewNotePage";
 import ConnectWallet from "./pages/ConnectWallet";
 import BeeHubsPage from "./pages/BeeHubsPage";

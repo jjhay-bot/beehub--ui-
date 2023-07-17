@@ -54,11 +54,17 @@ export default function AppBarContainer(props) {
         <Toolbar sx={{ p: 2 }}>
           <Grid container justifyContent="space-between" alignItems="center">
             <Item className="pointer" onClick={() => navigate("/")}>
-              <Grid container spacing={1} alignItems="center">
-                {/* <Item mt={1} ml={1}>
-                  <StarIcon />
-                </Item> */}
-                <Item className="tx600 tx115 c4">Solana NFTs App</Item>
+              <Grid container spacing={1}>
+                <Item mt={1} ml={1}>
+                  {/* <StarIcon /> */}
+                  <img
+                    src="https://www.freepnglogos.com/uploads/bee-png/does-bee-sting-the-penis-hurt-idiotprufs-32.png"
+                    alt="bee"
+                    width={25}
+                  />
+                </Item>
+                <Item className="tx600 tx115 c4">BeeHubs</Item>
+                <Item className="tx400 tx115 c4">(Build using Solana)</Item>
               </Grid>
             </Item>
 
@@ -76,14 +82,14 @@ export default function AppBarContainer(props) {
                     </Button>
                   </Item>
 
-                  <Item>
+                  {/* <Item>
                     <Button
                       className="capitalize tx100 tx400"
                       sx={{ color: "white" }}
                       onClick={() => navigate("/about")}>
                       About Us
                     </Button>
-                  </Item>
+                  </Item> */}
                 </Grid>
               )}
             </Item>

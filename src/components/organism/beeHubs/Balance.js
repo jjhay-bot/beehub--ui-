@@ -11,6 +11,10 @@ const Balance = ({ walletAddress, setWalletAddress }) => {
   const getBalance = async () => {
     const pk = new PublicKey(walletAddress);
 
+    if (balance) {
+      return setBalance();
+    }
+
     try {
       const balance = await connection.getBalance(pk);
       setBalance(balance / LAMPORTS_PER_SOL);
@@ -32,7 +36,7 @@ const Balance = ({ walletAddress, setWalletAddress }) => {
         <Grid container gap={2}>
           <Item>
             <Button variant="contained" onClick={getBalance}>
-              Check Balance
+              {`${!balance ? "Check" : "Hide"} Balance`}
             </Button>
           </Item>
           <Item>
@@ -44,7 +48,7 @@ const Balance = ({ walletAddress, setWalletAddress }) => {
         <Grid>
           {balance && (
             <Grid container alignItems="center" gap={1} pb={1.5}>
-              <Grid className="tx600" py={1} onClick={() => setBalance()}>
+              <Grid className="tx600" py={1}>
                 Balance:
               </Grid>
               <Chip size="small" label={`${balance} SOL`} variant="outlined" color="success" />

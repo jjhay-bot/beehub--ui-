@@ -49,9 +49,9 @@ export const theme = createTheme({
           "& input:-internal-autofill-selected": {
             background: "none",
           },
-          "&.Mui-focused fieldset": {
-            border: "1px #fff !important",
-          },
+          // "&.Mui-focused fieldset": {
+          //   border: "1px #fff !important",
+          // },
         },
       },
     },

@@ -86,22 +86,13 @@ export default function MenuOptions() {
                       Home
                     </MenuItem>
 
-                    <MenuItem
-                      onClick={handleClose}
-                      className="capitalize tx100 tx400"
-                      // sx={{ color: "white" }}
-                      component="a"
-                      target="_blank"
-                      href="https://form.jotform.com/231748268465467">
-                      Register as Supplier
-                    </MenuItem>
-                    <MenuItem
+                    {/* <MenuItem
                       onClick={(e) => {
                         handleClose(e);
                         navigate("/about");
                       }}>
                       About Us
-                    </MenuItem>
+                    </MenuItem> */}
                   </MenuList>
                 </ClickAwayListener>
               </Paper>
