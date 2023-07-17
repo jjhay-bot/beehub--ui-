@@ -36,24 +36,24 @@ export const theme = createTheme({
       },
     },
     MuiOutlinedInput: {
-      // styleOverrides: {
-      //   root: {
-      //     borderRadius: `5px`,
-      //     border: "white 1px solid",
-      //     "& input::-webkit-outer-spin-button, & input::-webkit-inner-spin-button": {
-      //       display: "none",
-      //     },
-      //     "& input[type=number]": {
-      //       MozAppearance: "textfield",
-      //     },
-      //     "& input:-internal-autofill-selected": {
-      //       background: "none",
-      //     },
-      //     "&.Mui-focused fieldset": {
-      //       border: "1px #fff !important",
-      //     },
-      //   },
-      // },
+      styleOverrides: {
+        root: {
+          borderRadius: `8px`,
+          border: "white 1px solid",
+          "& input::-webkit-outer-spin-button, & input::-webkit-inner-spin-button": {
+            display: "none",
+          },
+          "& input[type=number]": {
+            MozAppearance: "textfield",
+          },
+          "& input:-internal-autofill-selected": {
+            background: "none",
+          },
+          "&.Mui-focused fieldset": {
+            border: "1px #fff !important",
+          },
+        },
+      },
     },
   },
 });

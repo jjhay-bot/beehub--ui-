@@ -48,7 +48,7 @@ export default function AppBarContainer(props) {
   const navigate = useNavigate();
 
   return (
-    <Box>
+    <Box py={2}>
       <CssBaseline />
       <AppBar className="smooth">
         <Toolbar sx={{ p: 2 }}>

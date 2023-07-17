@@ -1,0 +1,156 @@
+{
+  "version": "0.1.0",
+  "name": "beehubs",
+  "instructions": [
+    {
+      "name": "startStuffOff",
+      "accounts": [
+        {
+          "name": "baseAccount",
+          "isMut": true,
+          "isSigner": true
+        },
+        {
+          "name": "user",
+          "isMut": true,
+          "isSigner": true
+        },
+        {
+          "name": "systemProgram",
+          "isMut": false,
+          "isSigner": false
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "addGif",
+      "accounts": [
+        {
+          "name": "baseAccount",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "user",
+          "isMut": true,
+          "isSigner": true
+        }
+      ],
+      "args": [
+        {
+          "name": "gifLink",
+          "type": "string"
+        },
+        {
+          "name": "gifTag",
+          "type": "string"
+        },
+        {
+          "name": "gifName",
+          "type": {
+            "option": "string"
+          }
+        },
+        {
+          "name": "timestamp",
+          "type": {
+            "option": "string"
+          }
+        },
+        {
+          "name": "author",
+          "type": {
+            "option": "string"
+          }
+        },
+        {
+          "name": "authorAvatar",
+          "type": {
+            "option": "string"
+          }
+        },
+        {
+          "name": "style",
+          "type": {
+            "option": "string"
+          }
+        }
+      ]
+    }
+  ],
+  "accounts": [
+    {
+      "name": "BaseAccount",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "totalGifs",
+            "type": "u64"
+          },
+          {
+            "name": "gifList",
+            "type": {
+              "vec": {
+                "defined": "ItemStruct"
+              }
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "types": [
+    {
+      "name": "ItemStruct",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "gifLink",
+            "type": "string"
+          },
+          {
+            "name": "userAddress",
+            "type": "publicKey"
+          },
+          {
+            "name": "gifTag",
+            "type": "string"
+          },
+          {
+            "name": "gifName",
+            "type": {
+              "option": "string"
+            }
+          },
+          {
+            "name": "timestamp",
+            "type": {
+              "option": "string"
+            }
+          },
+          {
+            "name": "author",
+            "type": {
+              "option": "string"
+            }
+          },
+          {
+            "name": "authorAvatar",
+            "type": {
+              "option": "string"
+            }
+          },
+          {
+            "name": "style",
+            "type": {
+              "option": "string"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

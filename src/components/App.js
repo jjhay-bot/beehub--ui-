@@ -7,6 +7,7 @@ import HomePage from "./pages/HomePage";
 import WalletPage from "./pages/WalletPage";
 import NewNotePage from "./pages/NewNotePage";
 import ConnectWallet from "./pages/ConnectWallet";
+import BeeHubsPage from "./pages/BeeHubsPage";
 // import PhantomPage from './pages/PhantomPage';
 
 export function AppOutlet() {
@@ -45,14 +46,10 @@ function App() {
         <Route path="wallet" element={<HomePage />} />
         <Route path="note" element={<NewNotePage />} />
         <Route path="buildspace" element={<ConnectWallet />} />
+        <Route path="beehubs" element={<BeeHubsPage />} />
         {/* <Route path="phantom" element={<PhantomPage />} /> */}
-        <Route index path="" element={<WalletPage />} />
-        {/* RELEASE #1 */}
-        {/* <Route path="main" element={<MainPage />} /> */}
-        {/* <Route index path="" element={<LandingPage />} />
-        <Route index path="home" element={<Home />} /> */}
-        {/* <Route index path="" element={<MainPage />} />
-        <Route index path="about" element={<LandingPage />} /> */}
+        {/* <Route index path="" element={<WalletPage />} /> */}
+        <Route index path="" element={<BeeHubsPage />} />
       </Route>
     </Routes>
   );
