@@ -156,7 +156,7 @@ const BeeHubs = () => {
           <Grid container gap={2}>
             {gifList?.map((gif, i) => (
               <Grid key={i} py={1}>
-                <img src={gif.gifLink} alt="img" width={200} style={{ borderRadius: "2.5rem" }} />
+                <img src={gif.gifLink} alt="img" width={200} height={200} style={{ borderRadius: "2.5rem" }} />
                 <Grid container gap={1} justifyContent="space-between" alignItems="end" px={1} pb={1}>
                   <Tooltip title="Gif name" arrow>
                     <Grid className="tx800 tx100 c1">{startCase(gif.gifName)}</Grid>
