@@ -41,7 +41,7 @@ const BeeHubs = () => {
     try {
       const program = await getProgram();
       const account = await program.account.baseAccount.fetch(baseAccount.publicKey);
-      setGifList(account.gifList);
+      setGifList(account.gifList.reverse());
     } catch (error) {
       console.log("Error in getGifList: ", error);
       setGifList(null);
@@ -159,7 +159,9 @@ const BeeHubs = () => {
                 <img src={gif.gifLink} alt="img" width={200} height={200} style={{ borderRadius: "2.5rem" }} />
                 <Grid container gap={1} justifyContent="space-between" alignItems="end" px={1} pb={1}>
                   <Tooltip title="Gif name" arrow>
-                    <Grid className="tx800 tx100 c1">{startCase(gif.gifName)}</Grid>
+                    <Grid className="tx800 tx100 c1"
+                      sx={{maxWidth: "100px"}}
+                    >{startCase(gif.gifName)}</Grid>
                   </Tooltip>
                   <Tooltip title="hashtag" arrow>
                     <Grid className="tx500 tx80 c1">#{gif.gifTag}</Grid>
