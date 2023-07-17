@@ -114,7 +114,7 @@ const BeeHubs = () => {
     const intervalId = setInterval(() => {
       getGifList();
       console.log("tessst");
-    }, 90000);
+    }, 60000);
 
     // This function will run when the component unmounts
     return () => {
