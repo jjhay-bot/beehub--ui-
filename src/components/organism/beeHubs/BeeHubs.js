@@ -175,7 +175,7 @@ const BeeHubs = () => {
                   alt="img"
                   width={200}
                   height={200}
-                  style={{ borderRadius: "2.5rem" }}
+                  style={{ borderRadius: "2.5rem", minHeight: 200, minWidth: 200 }}
                 />
                 <Grid container gap={1} justifyContent="space-between" alignItems="end" px={1} pb={1}>
                   <Tooltip title="Gif name" arrow>
