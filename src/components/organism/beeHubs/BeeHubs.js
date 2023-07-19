@@ -8,6 +8,7 @@ import { AnchorProvider, Program, web3 } from "@project-serum/anchor";
 import { Connection } from "@solana/web3.js";
 import { opts, network, programID, resetForm, InputField } from "./solanaHelper";
 import { startCase } from "lodash";
+import ProgressBar from "../../atoms/ProgressBar";
 window.Buffer = Buffer;
 
 const getProvider = () => {
@@ -23,6 +24,9 @@ const getProgram = async () => {
 const BeeHubs = () => {
   const [gifList, setGifList] = useState([]);
   const [formData, setFormData] = useState(resetForm);
+  const [loading, setLoading] = useState(false);
+
+  console.log("gifList", gifList);
 
   const [walletAddress, setWalletAddress] = useState(null);
 
@@ -41,7 +45,9 @@ const BeeHubs = () => {
     try {
       const program = await getProgram();
       const account = await program.account.baseAccount.fetch(baseAccount.publicKey);
-      setGifList(account.gifList.reverse());
+      const gifsSerialize = account.gifList.filter((x, id) => ![7, 8].includes(id)).reverse();
+      setGifList(gifsSerialize);
+      setTimeout(() => setLoading(false), 300);
     } catch (error) {
       console.log("Error in getGifList: ", error);
       setGifList(null);
@@ -83,6 +89,27 @@ const BeeHubs = () => {
     }
   };
 
+  // const updateGifLink = async (
+  //   id = 0,
+  //   new_gif_link = "https://preview.redd.it/pwpks2a80bj31.gif?width=800&auto=webp&s=48bfc3ad55d7d05c07ff193152deac92c9bb090e"
+  // ) => {
+  //   try {
+  //     const provider = getProvider();
+  //     const program = await getProgram();
+
+  //     await program.rpc.updateGif(id, new_gif_link, {
+  //       accounts: {
+  //         baseAccount: baseAccount.publicKey,
+  //         user: provider.wallet.publicKey,
+  //       },
+  //     });
+
+  //     console.log("updated GIF_LINK!");
+  //   } catch (error) {
+  //     console.log("Error sending GIF:", error);
+  //   }
+  // };
+
   const checkIfWalletIsConnected = async () => {
     if (window?.solana?.isPhantom) {
       console.log("Phantom wallet found!");
@@ -105,6 +132,7 @@ const BeeHubs = () => {
   }, []);
 
   useEffect(() => {
+    setLoading(true)
     getGifList();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [walletAddress]);
@@ -125,6 +153,8 @@ const BeeHubs = () => {
 
   if (!gifList) return <NewGifAccount baseAccount={baseAccount} getGifList={getGifList} />;
 
+  if (loading) return <ProgressBar loading={loading} />;
+
   return (
     <>
       <Grid container spacing={2} py={2} justifyContent="flex-start">
@@ -136,14 +166,13 @@ const BeeHubs = () => {
             ))}
 
             <Box pb={1} />
-
             {["author", "author_avatar"].map((x, i) => (
               <InputField
                 key={i}
                 value={formData[x] || ""}
                 name={x}
                 onChange={onChange}
-                optional={true}
+                optional={"true"}
               />
             ))}
             <Box mt={-0.5} />
@@ -169,7 +198,11 @@ const BeeHubs = () => {
           </Grid>
           <Grid container gap={2}>
             {gifList?.map((gif, i) => (
-              <Grid key={i} py={1}>
+              <Grid
+                key={i}
+                py={1}
+                // onClick={updateGifLink}
+              >
                 <img
                   src={gif.gifLink}
                   alt="img"

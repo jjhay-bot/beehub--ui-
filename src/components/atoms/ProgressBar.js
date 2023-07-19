@@ -34,7 +34,17 @@ export function FacebookCircularProgress(props) {
   );
 }
 
-export const ProgressBar = ({ loading, type }) => {
+export const ProgressBar = ({ loading }) => {
+  return (
+    loading && (
+      <Box position="absolute" top="45vh" sx={{ left: "50vw" }} mx={-2.5} zIndex={1}>
+        <FacebookCircularProgress />
+      </Box>
+    )
+  );
+};
+
+export const ProgressBar2 = ({ loading }) => {
   return (
     loading && (
       <Box position="absolute" top="45vh" sx={{ left: "50vw" }} mx={-2.5} zIndex={1}>
